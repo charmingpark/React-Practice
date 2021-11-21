@@ -8,6 +8,10 @@ function App() {
   let [post, postSet] = useState(["Re-act", "JS", "CSS"])
   let day = "11월 3일 발행"
 
+  function titleSetHandle() {
+    
+    titleSet("how");
+  }
 
   function postMixer(){
 
@@ -35,7 +39,7 @@ function App() {
   return (
     <div className="App">
       <div className="black-nav">
-        <div>개발 Blog</div>
+        <div onClick={titleSetHandle}>{title}</div>
       </div>
       <button onClick={postMixer}>제목 바꾸기</button>
       <div className="list">
